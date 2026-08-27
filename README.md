@@ -33,8 +33,18 @@ across heterogeneous manufacturing environments.
 ### Production-aware telemetry
 
 Machine-monitoring and telemetry systems associate shop-floor data with `Job` and `Task` context.
-They can use the production entities relevant to their integration without implementing the full
-scheduling model.
+By integrating telemetry with the production schedule, they know what work is expected to run, on
+which resource, and when. They can distinguish a planned stop, setup, or idle period from a
+production issue—for example, a Task that did not start on time, is running longer than planned, or
+is executing on the wrong Machine—and alert early enough for the shop to respond before downstream
+commitments are affected. This schedule-aware baseline reduces both false positives and missed
+alerts.
+
+The same result is difficult to achieve when planning is manual or when telemetry rules must be
+configured and updated by hand. Static thresholds quickly become stale as priorities, resource
+assignments, and start times change. With shared OMSP entities, monitoring systems can consume only
+the production context relevant to their integration and keep alerting aligned with the current
+schedule without implementing the full scheduling model.
 
 ### Customer–supplier coordination
 
